@@ -50,7 +50,7 @@ document.onkeyup = function(event) {
 	if (userChoice === compChoice) {
 	   	wins++;
 	   	// alert user of win
-	   	alert("You read my mind! Hit any key to play again.")
+	   	alert("You read my mind! It won't be so easy next time.")
 	   	// Update wins counter on screen
 	   	var winner = document.querySelector("#wins");
 	   	winner.innerHTML = "Wins: " + wins;
@@ -71,6 +71,8 @@ document.onkeyup = function(event) {
 	// End game if used all guess attempts
 	if (guessesLeft === 0) {
 		losses++;
+		// alert user of lose
+		alert("Looks like I've won this one. Care to try your luck again?")
 		// Update loss counter on screen
 		var loser = document.querySelector("#losses");
 		loser.innerHTML = "Losses: " + losses;
