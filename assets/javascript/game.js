@@ -31,6 +31,7 @@ document.onkeyup = function(event) {
     // alert user if they have already made the same guess previously
     if (userGuesses.indexOf(userChoice) > -1) {
     	alert("You have already guessed that letter. Please choose a different letter.");
+    	return;
     };
     // Add guess to the array of guesses so far
     userGuesses.push(userChoice)
@@ -41,6 +42,8 @@ document.onkeyup = function(event) {
 	if (userChoice === compChoice) {
 	   	wins++;
 	   	// Update wins counter on screen
+	   	var winner = document.querySelector("#wins");
+	   	winner.innerHTML = "Wins: " + wins;
 		// Reset game
 		resetGame();
 	}
@@ -48,13 +51,19 @@ document.onkeyup = function(event) {
 	else {
     	guessesLeft--;
     	// Update guess left on screen
-    	// Update guesses so far on screen    	
+    	var guessesLeftEl = document.querySelector("#guessesLeft");
+    	guessesLeftEl.innerHTML = "Guesses left: " + guessesLeft;
+    	// Update guesses so far on screen
+    	var userGuessesEl = document.querySelector("#userGuesses");
+    	userGuessesEl.innerHTML = "Your guesses so far :" + "<br />" + " " + userGuesses;
 	    }
 
 	// End game if used all guess attempts
 	if (guessesLeft === 0) {
 		losses++;
 		// Update loss counter on screen
+		var loser = document.querySelector("#losses");
+		loser.innerHTML = "Losses: " + losses;
 		// Reset game
 		resetGame();
 	}
