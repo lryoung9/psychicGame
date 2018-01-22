@@ -8,7 +8,7 @@ function resetGame() {
 	console.log("-----------------");
 	console.log("Game Reset");
 	console.log("# of wins: " + wins);
-	console.log("# of losses" + losses);
+	console.log("# of losses: " + losses);
 	// Reset guessesLeft
 	guessesLeft = 9;
 	console.log("Guesses Left: " + guessesLeft)
@@ -29,9 +29,9 @@ document.onkeyup = function(event) {
     var userChoice = event.key.toLowerCase();
     console.log("The user guessed :" + userChoice);
     // alert user if they have already made the same guess previously
-    // if (userChoice === userGuesses.find(userChoice)) {
-    // 	alert("You have already guessed that letter. Please choose a different letter.");
-    // };
+    if (userGuesses.indexOf(userChoice) > -1) {
+    	alert("You have already guessed that letter. Please choose a different letter.");
+    };
     // Add guess to the array of guesses so far
     userGuesses.push(userChoice)
     console.log("Your guesses so far: " + userGuesses)
