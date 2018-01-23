@@ -9,12 +9,12 @@ To begin, simply choose a letter from the keyboard as your first guess. Once the
 
 ## Built With
 
-* [Bootstrap](https://getbootstrap.com/docs/3.3/) - The web framework used
-* :princess:[Google Fonts - Princess Sofia](https://fonts.google.com/specimen/Princess+Sofia) - CSS font styling
+:boot: [Bootstrap](https://getbootstrap.com/docs/3.3/) - The web framework used
+:princess: [Google Fonts - Princess Sofia](https://fonts.google.com/specimen/Princess+Sofia) - CSS font styling
 
 ## Author
 
-* **Lydia Young** - [lryoung9](https://github.com/lryoung9)
+:pencil: **Lydia Young** - [lryoung9](https://github.com/lryoung9)
 
 ## Acknowledgments
 
